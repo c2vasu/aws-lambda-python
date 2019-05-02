@@ -38,6 +38,16 @@ def lambda_handler(event, context):
     }
 ```
 - Zip folder (lib/python2.7/site-packages) and upload to aws lambda
+```
+zip -r9 ../function.zip .
+```
+- update lambda fuction
+```
+cd ..
+
+aws lambda update-function-code --function-name aws-lambda-python --zip-file fileb://function.zip
+```
+
 
 
 
